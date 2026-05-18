@@ -1,3 +1,5 @@
+import SvgOnyxLogo from "@opal/logos/onyx-logo";
+import SvgOnyxTyped from "@opal/logos/onyx-typed";
 import { cn } from "@opal/utils";
 
 interface OnyxLogoTypedProps {
@@ -5,20 +7,19 @@ interface OnyxLogoTypedProps {
   className?: string;
 }
 
-const LOGOTYPE_ASPECT_RATIO = 3.5;
+const HEIGHT_TO_GAP_RATIO = 5 / 16;
 
 const SvgOnyxLogoTyped = ({ size: height, className }: OnyxLogoTypedProps) => {
-  const width = height != null ? height * LOGOTYPE_ASPECT_RATIO : undefined;
+  const gap = height != null ? height * HEIGHT_TO_GAP_RATIO : undefined;
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      alt="COREDEV"
-      src="/logotype.png"
-      height={height}
-      width={width}
-      className={cn("object-contain", className)}
-    />
+    <div
+      className={cn("flex flex-row items-center", className)}
+      style={{ gap }}
+    >
+      <SvgOnyxLogo size={height} />
+      <SvgOnyxTyped size={height} />
+    </div>
   );
 };
 export default SvgOnyxLogoTyped;

@@ -1,16 +1,14 @@
 import type { IconProps } from "@opal/types";
-const SvgOnyxLogo = ({ size, ...props }: IconProps) => {
-  const { className, ...rest } = props;
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      alt="Logo"
-      src="/logo.png"
-      height={size}
-      width={size}
-      className={className}
-      {...rest}
-    />
-  );
-};
+const SvgOnyxLogo = ({ size, ...props }: IconProps) => (
+  <svg
+    height={size}
+    width={size}
+    viewBox="0 0 300 300"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <image href="/logo.png" width="300" height="300" />
+  </svg>
+);
 export default SvgOnyxLogo;
