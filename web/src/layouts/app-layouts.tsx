@@ -465,9 +465,9 @@ function Footer() {
 
   const customFooterContent =
     settings?.enterpriseSettings?.custom_lower_disclaimer_content ||
-    `[Onyx ${
+    `[CoreDev Alex ${
       settings?.webVersion || "dev"
-    }](https://www.onyx.app/) - ${APP_SLOGAN}`;
+    }](https://alexandria.coredev.com) - CoreDev AI Platform`;
 
   return (
     <footer
