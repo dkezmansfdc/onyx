@@ -51,8 +51,8 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Onyx",
-  description: "Question answering for your documents",
+  title: "Alex",
+  description: "Question answering for CoreDev documents",
 };
 
 // force-dynamic prevents Next.js from statically prerendering pages at build
